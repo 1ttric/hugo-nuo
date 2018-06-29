@@ -27,10 +27,10 @@ const randomSubtitle = () => {
     ];
   if (error) {
     const subtitle = subtitleArray[Math.floor(Math.random() * subtitleArray.length)];
-    error.appendChild(document.createTextNode(subtitleEmoji));
+    error.appendChild(document.createTextNode(subtitle));
   }
 };
-randomErrorEmoji();
+randomSubtitle();
 
 // Object-fit polyfill for post cover
 /* eslint-disable no-undef */
