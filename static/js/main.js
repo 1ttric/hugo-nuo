@@ -1,5 +1,3 @@
-import './styles/main.css';
-
 // Selected DOM elements
 const html = document.querySelector('html');
 const body = document.querySelector('body');
@@ -19,16 +17,17 @@ if (menuToggle) {
   });
 }
 
-// Random emoji for 404 error message.
-const randomErrorEmoji = () => {
-  const error = document.getElementsByClassName('error-emoji')[0];
-  const emojiArray = [
-    '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)',
-    '(=\'X\'=)', '(>_<)', '(;-;)', '\\(^Д^)/',
-  ];
+// Random subtitle
+const randomSubtitle = () => {
+  const error = document.getElementsByClassName('subtitle')[0];
+  const subtitleArray = [
+    "Halt and catch fire", "Null pointer exception", "lp0 on fire", "PC LOAD LETTER", "Not a typewriter",
+    "418 I'm a teapot", "Abort, Retry, Fail?", "Terminal prompts disabled", "nslookup: can't resolve",
+    "SERVER: 127.0.0.53#53", "Mojibake Madness", "Update .gitignore"
+    ];
   if (error) {
-    const errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
-    error.appendChild(document.createTextNode(errorEmoji));
+    const subtitle = subtitleArray[Math.floor(Math.random() * subtitleArray.length)];
+    error.appendChild(document.createTextNode(subtitleEmoji));
   }
 };
 randomErrorEmoji();
